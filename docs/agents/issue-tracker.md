@@ -44,15 +44,8 @@ Used by `/wayfinder`. The **map** is a single issue with **child** issues as tic
 - **Claim**: `gh issue edit <n> --add-assignee @me`, the session's first write.
 - **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far.
 
-## Repo setup
+## Repo
 
-This repo is not yet a git repository and has no GitHub remote, so `gh` cannot
-infer the target repo. Before any of the above commands work, run:
+`vgviscayno/qr-payments-notif` (private). `gh` infers this from `git remote -v`.
 
-```bash
-git init
-gh repo create <owner>/<name> --private --source=. --remote=origin
-```
-
-Until then, skills that need the issue tracker should say so rather than
-silently falling back to another surface.
+The five triage labels from `triage-labels.md` exist on the repo.
